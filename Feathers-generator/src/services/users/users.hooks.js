@@ -10,13 +10,13 @@ const restrict = [
     ownerField: '_id'
   })
 ];
-
+    
 module.exports = {
   before: {
     all: [],
     find: [ authenticate('jwt') ],
     get: [ ...restrict ],
-    create: [ hashPassword() ],
+    create: [hashPassword() ],
     update: [ ...restrict, hashPassword() ],
     patch: [ ...restrict, hashPassword() ],
     remove: [ ...restrict ]
