@@ -6,5 +6,65 @@
     "default": 10,
     "max": 50
   },
-  "mongodb": "mongodb://masj:Mint.js1337@ds050539.mlab.com:50539/citywalks"
+  "mongodb": "mongodb://masj:Mint.js1337@ds050539.mlab.com:50539/citywalks",
+  "authentication": {
+    "secret": "e32ddb66e24bf90cfd21643ba616700b0cf32f945002c54dde05739bd6bbd2264e3badb2b538da9c315f4e779fbbb68b169f500c5bc8a54bc223b08623ecad08661c6edae4320297848532452ae82bc2b9f29b04cd85b7995c251aacefd0d9d0a106e57e07977d4d7725b288b98faf2a28bed3fd4b81b92d71f0a6a57ca32ea146013f4678f1b275ff927b7b69f82c43ecef612af596e2630a3ab871f9ab102b287f3a0b30727ecd523fff07bb4aff580ca1b565657ce5b92d7556405b26ac7c315034c8a580dc0ee8672b8bed23a8504273df4c72b27a961523c0fa2e8296ae34ec8fbe9082e69f69dfa50f57a73e2a24e36286bb0e22580fe68eb07f0d8e1c",
+    "strategies": [
+      "jwt",
+      "local"
+    ],
+    "path": "/authentication",
+    "service": "users",
+    "jwt": {
+      "header": {
+        "type": "access"
+      },
+      "audience": "https://yourdomain.com",
+      "subject": "anonymous",
+      "issuer": "feathers",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    },
+    "local": {
+      "entity": "user",
+      "service": "users",
+      "usernameField": "email",
+      "passwordField": "password"
+    },
+    "google": {
+      "clientID": "your google client id",
+      "clientSecret": "your google client secret",
+      "successRedirect": "/",
+      "scope": [
+        "profile openid email"
+      ]
+    },
+    "facebook": {
+      "clientID": "your facebook client id",
+      "clientSecret": "your facebook client secret",
+      "successRedirect": "/",
+      "scope": [
+        "public_profile",
+        "email"
+      ],
+      "profileFields": [
+        "id",
+        "displayName",
+        "first_name",
+        "last_name",
+        "email",
+        "gender",
+        "profileUrl",
+        "birthday",
+        "picture",
+        "permissions"
+      ]
+    },
+    "cookie": {
+      "enabled": true,
+      "name": "feathers-jwt",
+      "httpOnly": false,
+      "secure": false
+    }
+  }
 }
