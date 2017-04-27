@@ -5,7 +5,10 @@
 module.exports = function (app) {
   const mongooseClient = app.get('mongooseClient');
   const cities = new mongooseClient.Schema({
-    text: { type: String, required: true },
+        name:{
+        type: String,
+        required: true
+    },
     createdAt: { type: Date, default: Date.now },
     updatedAt: { type: Date, default: Date.now }
   });
