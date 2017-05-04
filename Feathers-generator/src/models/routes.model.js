@@ -9,12 +9,26 @@ module.exports = function (app) {
         type: String,
         required: true
     },
-    userId:{
-        type: String
+    creatorId:{
+        type: String,
+        required: true
     },
-    description:{
-        type: String
-    },
+    walkersId:[String],
+      
+    coords: [[Number]],
+      
+    time:String,
+    score:[{
+        userId:{type: String},
+        score:{type: Number}
+        }],
+
+    comments:[{
+        userId:{type: String},
+        comment:{type: String},
+        date:{type:Date}
+        }],
+    checkpoints:[String],
     distance:{
         type: Number
     },
