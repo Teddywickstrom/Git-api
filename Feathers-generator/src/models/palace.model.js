@@ -1,17 +1,14 @@
-// cities-model.js - A mongoose model
+// palace-model.js - A mongoose model
 // 
 // See http://mongoosejs.com/docs/models.html
 // for more of what you can do here.
 module.exports = function (app) {
   const mongooseClient = app.get('mongooseClient');
-  const cities = new mongooseClient.Schema({
-        name:{
-        type: String,
-        required: true
-    },
+  const palace = new mongooseClient.Schema({
+    text: { type: String, required: true },
     createdAt: { type: Date, default: Date.now },
     updatedAt: { type: Date, default: Date.now }
   });
 
-  return mongooseClient.model('cities', cities);
+  return mongooseClient.model('palace', palace);
 };
