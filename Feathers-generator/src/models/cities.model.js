@@ -9,6 +9,7 @@ module.exports = function (app) {
         type: String,
         required: true
     },
+    editedAt: { type: Date },
     createdAt: { type: Date, default: Date.now },
     updatedAt: { type: Date, default: Date.now }
   });
