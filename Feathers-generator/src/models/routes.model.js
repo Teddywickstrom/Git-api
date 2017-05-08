@@ -4,7 +4,9 @@
 // for more of what you can do here.
 module.exports = function (app) {
   const mongooseClient = app.get('mongooseClient');
-  const routes = new mongooseClient.Schema({
+    var GeoJSON = require('mongoose-geojson-schema');
+    var mongoose = require('mongoose');
+  const routes = new mongoose.Schema({
      name:{
         type: String,
         required: true
@@ -17,7 +19,7 @@ module.exports = function (app) {
         {userId:{type: mongooseClient.Schema.Types.ObjectId,
          ref: 'users'}}],
       
-    coords: [[Number]],
+    coords: [[mongoose.Schema.Types.Point]],
       
     time:String,
     score:[{

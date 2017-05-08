@@ -10,7 +10,7 @@ module.exports = function (app) {
     longitude:Number,
     type: {type: String, required: true}
     }
-  });
+  );
 
   return mongooseClient.model('checkpoints', checkpoints);
 };
