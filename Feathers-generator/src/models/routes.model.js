@@ -13,22 +13,29 @@ module.exports = function (app) {
         type: String,
         required: true
     },
-    walkersId:[String],
+    walkersId:[ 
+        {userId:{type: mongooseClient.Schema.Types.ObjectId,
+         ref: 'users'}}],
       
     coords: [[Number]],
       
     time:String,
     score:[{
-        userId:{type: String},
+        userId:{type: mongooseClient.Schema.Types.ObjectId,
+         ref: 'users'},
         score:{type: Number}
         }],
 
     comments:[{
-        userId:{type: String},
+        userId:{type: mongooseClient.Schema.Types.ObjectId,
+         ref: 'users'},
         comment:{type: String},
         date:{type:Date}
         }],
-    checkpoints:[String],
+    checkpoints:[ 
+        {checkpointsId:{type: mongooseClient.Schema.Types.ObjectId,
+         ref: 'checkpoints'}}
+        ],
     distance:{
         type: Number
     },

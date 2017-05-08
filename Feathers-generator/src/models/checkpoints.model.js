@@ -8,8 +8,7 @@ module.exports = function (app) {
     name: {type: String, unique: true, required: true },
     latitude:Number,
     longitude:Number,
-    type: {type: String, required: true},
-    typeDescription:{type:String, required: true
+    type: {type: String, required: true}
     }
   });
 

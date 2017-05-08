@@ -8,11 +8,13 @@ module.exports = function (app) {
     username: {type: String, unique: true, required: true },
     email: {type: String, unique: true, required: true},
     password: { type: String, required: true },
-    friends:[String],
+    friends:[{type: mongooseClient.Schema.Types.ObjectId,
+              ref: 'users'}],
     routes:[ 
-        {routeId:{type: String},walked_date: {type:[Date]}
-        }
-    ],      
+        {routeId:{type: mongooseClient.Schema.Types.ObjectId,
+         ref: 'routes'},
+         walked_date: {type:[Date]}
+        }],      
     googleId: { type: String },
   
     facebookId: { type: String },
