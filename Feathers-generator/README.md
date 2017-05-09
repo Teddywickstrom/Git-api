@@ -47,7 +47,7 @@ For more information on all the things you can do with Feathers visit [docs.feat
 ## SchemaModels -CRUD Schemas 
 # Routes 
 {
-    "name": "Ålands wow vilket ställe, tillbaka igen" ,
+    "title": "Ålands wow vilket ställe, tillbaka igen" ,
     "creatorId": "59086e45845aa927b4540f14",
     "walkersId":"59086e45845aa927b4540f14",
     "coords": [[23,34],[13,37],[13,38],[13,39]],
@@ -79,6 +79,17 @@ For more information on all the things you can do with Feathers visit [docs.feat
     ]      
 
   }
+  
+  # Checkpoints
+  
+  {
+    "name": "Tedzor!" ,
+    "coord":[13,37],
+    "type": "Water"                     // kan skapa egna typer! 
+    
+
+  }
+  
 
 ## Changelog
 

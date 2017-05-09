@@ -6,7 +6,7 @@ module.exports = function (app) {
   const mongooseClient = app.get('mongooseClient');
 var mongoose = require('mongoose');  
   const routes = new mongooseClient.Schema({
-     name:{
+     title:{
         type: String,
         required: true
     },
