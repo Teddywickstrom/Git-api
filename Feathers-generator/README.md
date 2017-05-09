@@ -44,6 +44,42 @@ $ feathers help                           # Show all commands
 
 For more information on all the things you can do with Feathers visit [docs.feathersjs.com](http://docs.feathersjs.com).
 
+## SchemaModels -CRUD Schemas 
+# Routes 
+{
+    "name": "Ålands wow vilket ställe, tillbaka igen" ,
+    "creatorId": "59086e45845aa927b4540f14",
+    "walkersId":"59086e45845aa927b4540f14",
+    "coords": [[23,34],[13,37],[13,38],[13,39]],
+    "time": "5h",
+    "score":[
+    	{"userId":"59086e45845aa927b4540f14",
+    	"score": 5} 
+    	],
+    "comments":[
+    	{"userId" : "59086e45845aa927b4540f14", "comment":"hej vilken kul rutt och guuu vad åland är fint såhär års!!!!;D","date":"2017-05-04 15:26:33.856Z"}
+    	],
+    "checkpoints":["59106db275ad38fa0105be62"],
+    "distance":7
+   
+  }
+  
+  # Users
+  
+{
+    "username": "EnNyUser7" ,
+    "email": "Email7@email.com" ,
+    "password":"EnNyUser",
+    "friends":["59086e45845aa927b4540f14","590b0067cd891e21605fcb95"],
+    "routes":[                                                                              //Skall vara unik, kan gå samma rutt olika tidpunkter
+        {"routeId":"5900bc293cd85213b4bb0268","walked_date": "2017-05-04 15:26:33.856Z"
+        },
+        {"routeId":"5900bc293cd85213b4bb0268","walked_date": "2017-05-08 15:26:33.856Z"
+        }
+    ]      
+
+  }
+
 ## Changelog
 
 __0.1.0__

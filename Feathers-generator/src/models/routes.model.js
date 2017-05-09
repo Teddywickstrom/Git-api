@@ -4,27 +4,25 @@
 // for more of what you can do here.
 module.exports = function (app) {
   const mongooseClient = app.get('mongooseClient');
-    var GeoJSON = require('mongoose-geojson-schema');
-    var mongoose = require('mongoose');
-  const routes = new mongoose.Schema({
+var mongoose = require('mongoose');  
+  const routes = new mongooseClient.Schema({
      name:{
         type: String,
         required: true
     },
-    creatorId:{
-        type: String,
-        required: true
-    },
+    creatorId: {type: mongooseClient.Schema.Types.ObjectId,
+         ref: 'users',required: true},
+        
     walkersId:[ 
-        {userId:{type: mongooseClient.Schema.Types.ObjectId,
-         ref: 'users'}}],
+        {type: mongooseClient.Schema.Types.ObjectId,
+         ref: 'users'}],
       
-    coords: [[mongoose.Schema.Types.Point]],
+    coords: [[Number]],
       
     time:String,
     score:[{
         userId:{type: mongooseClient.Schema.Types.ObjectId,
-         ref: 'users'},
+         ref: 'users', unique:true},
         score:{type: Number}
         }],
 
@@ -35,8 +33,8 @@ module.exports = function (app) {
         date:{type:Date}
         }],
     checkpoints:[ 
-        {checkpointsId:{type: mongooseClient.Schema.Types.ObjectId,
-         ref: 'checkpoints'}}
+        {type: mongooseClient.Schema.Types.ObjectId,
+         ref: 'checkpoints'}
         ],
     distance:{
         type: Number

@@ -6,8 +6,7 @@ module.exports = function (app) {
   const mongooseClient = app.get('mongooseClient');
   const checkpoints = new mongooseClient.Schema({
     name: {type: String, unique: true, required: true },
-    latitude:Number,
-    longitude:Number,
+    coord: [Number],
     type: {type: String, required: true}
     }
   );
