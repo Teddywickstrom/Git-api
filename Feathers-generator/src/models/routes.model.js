@@ -22,7 +22,7 @@ var mongoose = require('mongoose');
     time:String,
     score:[{
         userId:{type: mongooseClient.Schema.Types.ObjectId,
-         ref: 'users', unique:true},
+         ref: 'users'},
         score:{type: Number}
         }],
 
