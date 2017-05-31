@@ -26,6 +26,7 @@ Getting up and running is as easy as 1, 2, 3.
 ## Testing
 
 Simply run `npm test` and all your tests in the `test/` directory will be run.
+// We have not used these functions
 
 ## Scaffolding
 
@@ -44,7 +45,7 @@ $ feathers help                           # Show all commands
 
 For more information on all the things you can do with Feathers visit [docs.feathersjs.com](http://docs.feathersjs.com).
 
-## SchemaModels -CRUD Schemas 
+## SchemaModels -CRUD Schemas // Examples of the HTTP requests structure for the different #routes
 # Routes 
 {
     "title": "Ålands wow vilket ställe, tillbaka igen" ,
